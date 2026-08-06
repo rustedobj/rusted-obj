@@ -1,25 +1,313 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Designs By Rusted Obj</title>
-    <link rel="icon" href="/favicon.ico">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&family=Jersey+15&family=Inter&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="circle-glow"></div>
-    <div class="circle-big"></div>
-    <div class="circle-small"></div>
-    <div class="hero">
-      <h1 class="heading">GOOD THINGS TAKE TIME</h1>
-      <p class="heading-description">Coming soon...</p>
-      <p class="paragraph"></p>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUSTED Content Creation Portfolio</title>
+  <meta name="description"
+    content="Professional minimalist portfolio showcase for RUSTED OBJ. Crimson highlight themed digital work, content strategy, and creative video production.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-video-container">
+      <video autoplay loop muted playsinline id="bgVideo">
+        <!-- Using a dark, high-quality public video overlay of mechanical/architectural motion -->
+        <source
+          src="https://assets.mixkit.co/videos/preview/mixkit-abstract-laser-lights-background-loop-41851-large.mp4"
+          type="video/mp4">
+      </video>
     </div>
-    <div class="gradient-overlay"></div>
-  </body>
+
+    <!-- Video that plays when profile is clicked -->
+    <div class="showcase-video-container" id="showcaseVideoContainer">
+      <video playsinline id="showcaseVideo">
+        <source src="https://r2.guns.lol/1f6e4283-4d15-4a4f-b59a-1846ce20c087.mp4" type="video/mp4">
+      </video>
+      <button class="showcase-mute-btn" id="showcaseMuteBtn" aria-label="Mute/Unmute Video">
+        <svg class="mute-icon volume-on" viewBox="0 0 24 24"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+        <svg class="mute-icon volume-off hidden" viewBox="0 0 24 24"><path fill="currentColor" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+      </button>
+      <div class="video-black-overlay" id="videoBlackOverlay"></div>
+    </div>
+
+    <div class="hero-overlay" id="heroOverlay"></div>
+    <div class="container" style="position: relative; z-index: 3; width: 100%;">
+      <div class="hero-content" id="heroContent">
+        <div class="hero-text">
+          <h1>RUSTED OBJ</h1>
+          <h2><span class="crimson-text">Retention</span>: The Art Of Keeping Attention.</h2>
+        </div>
+        <div class="hero-profile-container">
+          <div class="profile-wrapper" id="profileWrapper">
+            <img src="https://unavatar.io/youtube/flapant"
+              alt="flapant Profile Picture" class="profile-pic" id="profilePic">
+          </div>
+          <p class="profile-hint" id="profileHint">Click Picture for Magic</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Immediate Proof Section -->
+  <section class="proof" id="proof">
+    <div class="container">
+      <div class="proof-grid">
+        <div class="proof-item">
+          <h3>100K+</h3>
+          <p>Views Generated</p>
+        </div>
+        <div class="proof-item">
+          <h3>20+</h3>
+          <p>Videos Delivered</p>
+        </div>
+        <div class="proof-item">
+          <h3>3+</h3>
+          <p>Years Professional Exp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Work Section (4 columns) -->
+  <section class="work section-padding" id="work">
+    <div class="container">
+      <div class="section-header">
+        <p>Selected Works</p>
+        <h2>Featured Client Work</h2>
+      </div>
+      <div class="work-grid">
+        <!-- Row 1: 9:16 on Left, 16:9 on Right -->
+        <div class="work-row row-type-1">
+          <div class="work-card ar-9-16" data-video-url="https://www.youtube-nocookie.com/embed/FwnokR-62Po"
+            data-description="High retention motion graphics edit showcasing dynamic pacing.">
+            <img class="work-thumbnail" src="https://img.youtube.com/vi/FwnokR-62Po/maxresdefault.jpg"
+              alt="Cyberpunk Neon">
+            <div class="work-info">
+              <span>Motion // 01</span>
+              <h3>Majestic Space</h3>
+            </div>
+            <div class="work-play-btn">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+          <div class="work-card ar-16-9" id="workCard16by9"
+            data-video-url="https://www.youtube-nocookie.com/embed/fVUPZ6BYALA?si=LHnLDErPIcCI_ajr"
+            data-description="A captivating demonstration of our cinematic style.">
+            <img class="work-thumbnail" src="https://img.youtube.com/vi/fVUPZ6BYALA/maxresdefault.jpg"
+              alt="Wave Cinematic">
+            <div class="work-info">
+              <span>Youtube Gaming // 02</span>
+              <h3>Cuts|SFX & Animation</h3>
+            </div>
+            <div class="work-play-btn">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: 16:9 on Left, 9:16 on Right -->
+        <div class="work-row row-type-2">
+          <div class="work-card ar-16-9"
+            data-video-url="https://www.youtube-nocookie.com/embed/F8OaXP50K_U?si=UvgaSg8TOZ6GLiRy"
+            data-description="Smooth transition graphics detailing precise animation dynamics.">
+            <img class="work-thumbnail" src="https://img.youtube.com/vi/F8OaXP50K_U/maxresdefault.jpg"
+              alt="Space Particle">
+            <div class="work-info">
+              <span>Motion // 03</span>
+              <h3>Sharp & Gentle</h3>
+            </div>
+            <div class="work-play-btn">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+          <div class="work-card ar-9-16" data-video-url="https://www.youtube-nocookie.com/embed/3i7SeWctPA4"
+            data-description="Vertical short form retention editing showcasing high energy visual effects.">
+            <img class="work-thumbnail" src="https://img.youtube.com/vi/3i7SeWctPA4/maxresdefault.jpg"
+              alt="Liquid Flow">
+            <div class="work-info">
+              <span>Abstract Art // 04</span>
+              <h3>Crimson Delirium</h3>
+            </div>
+            <div class="work-play-btn">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials Section -->
+  <section class="testimonials section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-header" style="margin: 0 auto 4rem auto; text-align: center;">
+        <p>Endorsements</p>
+        <h2>Client Testimonials</h2>
+      </div>
+      <div class="testimonial-container">
+        <div class="testimonial-track">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide active">
+            <p class="testimonial-quote">"As an editor myself he helped me make some of my nicest videos"</p>
+            <h4 class="testimonial-author">Deslooper</h4>
+            <p class="testimonial-role">Creator, Youtube</p>
+          </div>
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"waiting on testimonial."</p>
+            <h4 class="testimonial-author">MiMo</h4>
+            <p class="testimonial-role">Founder, Vtuber</p>
+          </div>
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"waiting on testimonial."</p>
+            <h4 class="testimonial-author">Tenny</h4>
+            <p class="testimonial-role">Marketing, Nocturnal </p>
+          </div>
+        </div>
+        <!-- Testimonial Navigation Dots -->
+        <div class="testimonial-nav">
+          <span class="testimonial-dot active" data-index="0"></span>
+          <span class="testimonial-dot" data-index="1"></span>
+          <span class="testimonial-dot" data-index="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process & Call To Action Section -->
+  <section class="strategy section-padding" id="strategy">
+    <div class="container">
+      <div class="section-header">
+        <p>Our Strategy</p>
+        <h2>The Content Strategy Process</h2>
+      </div>
+
+      <div class="strategy-intro">
+        <h3>We engineer visual hooks, refine retention mechanics, and deploy targeted content loops to systematically
+          scale your digital footprint.</h3>
+      </div>
+
+      <!-- 5 Steps Process -->
+      <div class="steps-list">
+        <div class="step-card" data-explanation="Breaking down ideas into compelling stories.">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h4>Plan</h4>
+          </div>
+        </div>
+        <div class="step-card" data-explanation="Capturing attention in the first 3 seconds.">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h4>Hook</h4>
+          </div>
+        </div>
+        <div class="step-card"
+          data-explanation="Edit for pace and retention, Cutting out the boring parts and keeping every second Engaging.">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h4>Edit</h4>
+          </div>
+        </div>
+        <div class="step-card" data-explanation="Building a distinct visual identity.">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h4>Brand</h4>
+          </div>
+        </div>
+        <div class="step-card"
+          data-explanation="Improve with every upload and understand real time audience retention.">
+          <div class="step-num">05</div>
+          <div class="step-body">
+            <h4>Ship</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Explanatory Message Box -->
+      <div class="step-explanation-box" id="stepExplanationBox">
+        <p id="stepExplanationText">Select a step above to see the overview.</p>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="cta-group">
+        <button id="btsBtn" class="btn btn-secondary">Explore BTS Projects</button>
+        <div class="connect-btn-wrapper">
+          <div class="emoji-container">
+            <span class="btn-emoji">😳</span>
+          </div>
+          <a href="https://twitter.com/rustedobj" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary">Connect With Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BTS Popup Modal -->
+  <div class="popup-overlay" id="btsPopup">
+    <div class="popup-box">
+      <h3>Redirecting</h3>
+      <p>You're about to be redirected to a Google Drive folder to view behind-the-scenes projects.</p>
+      <div class="popup-actions">
+        <button class="btn btn-secondary" id="btsCancel">Cancel</button>
+        <button class="btn btn-primary" id="btsProceed">Proceed</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">RUSTED<span class="crimson-text">//</span></div>
+        <div class="footer-socials">
+          <a href="https://www.youtube.com/@RustedObj" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://www.instagram.com/rustedobj/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://twitter.com/rustedobj" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+          <a href="https://www.linkedin.com/in/rashedobj/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 RUSTED. All rights reserved.</p>
+        <p>Minimalist Design System &copy; RUSTED OBJ</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Video Modal -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <video id="modalVideo" controls></video>
+      <p id="modalDescription" class="modal-description hidden"></p>
+    </div>
+  </div>
+
+  <!-- YouTube Embed Modal -->
+  <div class="modal" id="youtubeModal">
+    <div class="modal-content">
+      <button class="modal-close" id="youtubeClose">&times;</button>
+      <iframe id="youtubeIframe" src="" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p id="youtubeDescription" class="modal-description hidden"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
 </html>
